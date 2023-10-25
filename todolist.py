@@ -48,7 +48,7 @@ def add_task():
 
     if name_valid and date_valid :
          # Création d'un dictionnaire représentant la tâche
-        task = {"task_name": task_name, "deadline": deadline,"description": detail_name, "done": False}
+        task = {"task_name": task_name, "deadline": deadline,"detail": detail_name, "done": False}
          # Ajout de la tâche à la liste
         tasks.append(task)
         # Mise à jour de la liste des tâches affichée
@@ -160,16 +160,16 @@ task_name_label.place(x=1310,y=150)
 task_desc_entry = tk.Entry(fenetre, width=60)
 task_desc_entry.place(x=1450,y=152)
 
+# Libellé et champ pour la date d'échéance
+deadline_label = tk.Label(fenetre, text="Date d'échéance (JJ/MM/AAAA):", font=35)
+deadline_label.place(x=1310,y=230)
+
 # Libellé et champ pour les détails de la tâche
 detail_name_label = tk.Label(fenetre, text="Détails liés à la tâche:", font=35)
 detail_name_label.place(x=1310,y=300)
 
 detail_desc_entry = tk.Entry(fenetre, width=55, font=35)
 detail_desc_entry.place(x=1310,y=330)
-
-# Libellé et champ pour la date d'échéance
-deadline_label = tk.Label(fenetre, text="Date d'échéance (JJ/MM/AAAA):", font=35)
-deadline_label.place(x=1310,y=230)
 
 deadline_entry = tk.Entry(fenetre, width=30 )
 deadline_entry.place(x=1550,y=232)
@@ -191,7 +191,6 @@ update_selected_task_detail()
 
 # Libellé pour afficher les détails de la tâche sélectionnée
 selected_task_label = tk.Label(fenetre, textvariable=selected_task_detail, bg="white")
-selected_task_label.pack()
 selected_task_label.place(x=150,y=100)
 
 # Bouton pour marquer une tâche comme terminée
