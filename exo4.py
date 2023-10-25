@@ -73,7 +73,6 @@ def validate_date(date_string):
         else:
             return False
     except ValueError:
-        messagebox.showwarning("Erreur de date", "Veuillez entrer une date valide au format JJ/MM/AAAA.")
         return False
 
 # Fonction pour mettre à jour la liste des tâches affichée
