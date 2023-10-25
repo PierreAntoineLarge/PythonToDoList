@@ -195,7 +195,7 @@ selected_task_label = tk.Label(fenetre, textvariable=selected_task_detail, bg="w
 selected_task_label.pack()
 
 # Bouton pour marquer une tâche comme terminée
-mark_done_button = tk.Button(fenetre, text="Marquer comme terminée", command=mark_as_done, font=35)
+mark_done_button = tk.Button(fenetre, text="Marquer comme terminée", command=lambda: mark_as_done(True), font=35)
 mark_done_button.place(x=150,y=100)
 
 # Bouton pour marquer une tâche comme à faire
